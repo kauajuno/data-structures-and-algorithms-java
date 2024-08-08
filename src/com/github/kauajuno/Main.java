@@ -10,6 +10,9 @@ public class Main{
         cll.insertAtBegin(20);
         cll.insertAtBegin(30);
         cll.insertAtBegin(40);
+        cll.insertAtEnd(50);
+        cll.insertAtEnd(60);
+        CircularLinkedList.Node example = cll.getNode(20);
 
         cll.traversal();
     }
