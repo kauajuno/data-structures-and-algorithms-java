@@ -77,6 +77,11 @@ public class DoublyLinkedList {
             return;
         }
 
+        if(next == this.head.next){
+            insertAtBegin(val);
+            return;
+        }
+
         Node aux = new Node(val);
         next.prev.next = aux;
         aux.prev = next.prev;
