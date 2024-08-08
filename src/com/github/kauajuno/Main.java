@@ -1,21 +1,30 @@
 package com.github.kauajuno;
 
+import com.github.kauajuno.ds.DoublyLinkedList;
 import com.github.kauajuno.ds.LinkedList;
 
 public class Main{
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        DoublyLinkedList dll = new DoublyLinkedList();
 
-        ll.insertAtBegin(20);
-        ll.insertAtBegin(30);
-        ll.insertAtBegin(40);
-        ll.traversal();
-        ll.insertAtEnd(50);
-        ll.insertAtEnd(60);
-        ll.traversal();
-        ll.insertAtBegin(70);
-        LinkedList.Node example = ll.getNode(20);
-        ll.insertAfter(example, 100);
-        ll.traversal();
+        dll.insertAtBegin(30);
+        dll.insertAtBegin(40);
+        dll.insertAtBegin(50);
+        dll.insertAtEnd(90);
+        dll.insertAtEnd(80);
+        DoublyLinkedList.Node yeah = dll.getNode(30);
+        dll.insertAfter(yeah, 15);
+        dll.insertBefore(yeah, 45);
+
+        dll.traversal();
+
+        DoublyLinkedList.Node first = dll.getNode(50);
+        DoublyLinkedList.Node last = dll.getNode(80);
+
+        dll.removeNode(first);
+        dll.removeNode(last);
+        dll.removeNode(yeah);
+
+        dll.traversal();
     }
 }
